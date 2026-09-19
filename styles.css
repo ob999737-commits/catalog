@@ -1,0 +1,497 @@
+        :root {
+            --bg-color: #565656;
+            --text-color: white;
+            --accent-blue: #0a79df;
+        }
+
+        * { box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Шапка */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 2;
+            
+        }
+
+    /* Картинка теперь занимает всю ширину шапки */ 
+    .header img { 
+        width: 100%; 
+        height: 45vh; /* Высота картинки */ 
+        object-fit: cover; 
+    }
+
+        /* Сделаем контейнер position: relative, чтобы мы могли позиционировать внутри него элементы */
+.hero-banner { 
+    width: 100%; 
+    height: 45vh; /* Или любую другую удобную вам высоту */ 
+}
+/* Контейнер для текста */
+/* Текстовый контент */
+.hero-content {
+    position: absolute; /* Теперь он "висит" над всем содержимым .header */
+    top: 17%; /* Отступ сверху от края шапки */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3; /* Над всеми остальными элементами */
+}
+
+/* Заголовок */
+.hero-content h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 0.1em; /* Расстояние до слогана */
+    letter-spacing: 0.03em;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.9);
+}
+
+/* Слоган */
+.hero-content p {
+    display: inline-block;
+    background-color: rgba(39, 39, 39, 0.7); /* Более темная подложка */
+    border-radius: 20px;
+    box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.5);
+    padding-left: 1.8rem; /* Боковые отступы */
+    padding-right: 1.8rem;
+    padding-top: 0.3em; /* Вертикальные отступы */
+    padding-bottom: 0.3em;
+    font-family: 'Kaushan Script', cursive;
+    font-size: clamp(1.3rem, 4vw, 2.1rem);
+    white-space: nowrap; /* Чтобы влезло в одну строку */
+    text-shadow: 0px 1px 1px rgba(19, 18, 18, 0.9);
+}
+
+
+/* Растянем картинку на весь экран */
+.hero-banner img {
+  width: 100%;
+  height: 40vh; /* Выбирай высоту по вкусу */
+  object-fit: cover;
+  display: block;
+}
+
+/* Превратим меню в "накладку". Оно будет занимать ту же ширину, что и картинка */
+.hero-banner nav {
+  position: absolute; /* Позиционируем относительно родителя */
+  top: 6%; /* Теперь оно будет прижато к верхнему краю */ 
+  left: 0; 
+  padding: 0 2rem; /* Внутренние отступы */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px; /* Фиксированная высота панели */
+  /* Полупрозрачная подложка для лучшей читаемости текста */
+  background-color: rgba(0,0,0,0.3);
+}
+.hero-banner nav {
+    width: 100%; /* ⬇️ Меню будет занимать почти всю ширину */
+    max-width: 1500px; /* ⬇️ Но не больше определённого размера */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-banner nav a {
+  color: #fff;
+  font-weight: bold;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.hero-banner nav a:hover {
+  opacity: 0.7;
+}
+
+        /* Стиль для новой секции */
+.hero-banner img {
+            display: block; /* Убираем лишние отступы */
+            width: 100%; /* Растягиваем по всей ширине */
+            height: 50vh; /* Высота = 30% от высоты окна браузера */
+            object-fit: cover; /* Обрезаем лишнее, сохраняя пропорции */
+}
+
+nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+}
+
+nav a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.2s ease-in-out;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.7);
+}
+
+    nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Секция коллекций */
+    h2.section-header {
+            color: var(--accent-blue);
+            padding-left: 2rem;
+            padding-top: 2rem;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+        }
+
+    .collections-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ширина одной карточки ~350px */ 
+            justify-items: center; /* Центрируем содержимое внутри ячеек сетки */ 
+            gap: 1rem;
+            padding: 0; /* Убираем лишние отступы */
+        }
+
+    .preview-card {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: rgba(63, 63, 63, 0.1); /* Полупрозрачная подложка */
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            padding: 1.5rem; /* Больше внутреннего отступа */ 
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5); /* Легкая тень */ 
+            background-color: rgba(151, 151, 151, 0.2); /* Более темная полупрозрачная рамка */
+            border-radius: 10px; /* Скругление всех углов */
+        }
+
+    .preview-card:hover {
+            transform: scale(1.02);
+        }
+
+    .card-title {
+            background-color: var(--accent-blue);
+            color: rgb(31, 30, 30);
+            padding: 0.5rem 1rem;
+            border-radius: 10px 10px 0 0;
+            width: fit-content;
+            margin-bottom: 0.5rem;
+        }
+
+    .card-image {
+            width: 100%;
+            max-height: 30vh; /* Высота до 40% экрана */ 
+            object-fit: cover;
+            border-radius: inherit; /* Наследуем радиус родителя */
+            
+        }
+
+
+
+.slogan {
+    font-family: 'Kaushan Script', cursive;
+    display: inline-block; /* Оставляем подложку */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 999px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+#ar-prompt { 
+    display: none; 
+}
+
+/* Стиль для новой секции */
+.catalog-section {
+    display: block;
+    gap: 2rem; /* Отступ между карточками */
+}
+
+.product-card {
+    background-color: rgba(63, 63, 63, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+/* Расположение текста и модели рядом */
+@media screen and (min-width: 768px) { /* Для больших экранов */
+    .product-card {
+        display: flex;
+        align-items: start;
+    }
+    .card-text {
+        width: 50%;
+        margin-right: 2rem;
+        padding-left: 2rem; /* Отступ от левого края */
+    }
+    .card-model {
+        width: 50%;
+        padding-right: 2rem; /* Отступ от правого края */
+    }
+} 
+/* На маленьких экранах блоки будут идти друг за другом */
+@media screen and (max-width: 767px) {
+    .card-text,
+    .card-model {
+        width: 100%;
+    }
+}
+
+.card-text h3 {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    color: var(--accent-blue);
+    margin-bottom: 0.5em;
+}
+.specs-list {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.4;
+}
+.specs-list li strong {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Настройка контейнера для модели */
+.card-model model-viewer {
+    height: 55vh; /* Высота модели зависит от экрана */
+    max-height: 400px;
+    width: 100%;
+}
+
+.product-card + .product-card {
+    margin-top: 2rem;
+}
+
+.section-header {
+    /* Убираем отступ слева */
+    padding-left: 0;
+    
+    /* Делаем блок шириной во весь экран */
+    width: 100%;
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: clamp(1.8rem, 7vw, 3rem); /* Увеличим размер шрифта */
+}
+
+/* Блок-подложка */
+.catalog-intro {
+    /* Фоновый цвет чуть темнее основного фона сайта */
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    /* Отступы внутри блока */
+    padding-top: 1,5rem;
+    padding-bottom: 4rem; /* Больше отступа внизу для линии */
+}
+
+/* Заголовок внутри этого блока */
+.catalog-intro h2 {
+    font-size: clamp(2.5rem, 8vw, 4rem); /* Адаптивный размер шрифта */
+    color: var(--accent-blue); /* Ваш акцентный синий */
+    text-align: center; /* Центрирование по ширине */
+    /* Центрирование по высоте */
+    display: block;
+    margin: auto;
+    max-width: 90%; /* Чтобы не было слишком растянутым на больших экранах */
+}
+
+/* Горизонтальная линия-разделитель под заголовком */
+.catalog-intro::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 5px;
+    background-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(63, 63, 63, 0.3) 20%, 
+        rgba(63, 63, 63, 0.3) 80%, 
+        transparent 100%
+    );
+    margin: 0 auto; /* Центрируем линию */
+}
+
+/* Общий стиль подвала */
+.site-footer {
+    background-image: url("Shapka02.jpeg"); /* Без слэшей */ /* Та же картинка, что и в шапке */
+    background-size: cover;
+    color: #fff; /* Белый текст */
+    background-color: rgba(0, 0, 0, 0.155); /* Полупрозрачная черная маска */
+}
+
+/* Контейнер внутри подвала */
+.site-footer .container {
+    display: flex;
+    justify-content: start; /* Разделяем контент на две колонки */
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem; /* Или используйте rem/px/vw для адаптивности */ 
+    padding-right: 4rem;
+}
+
+/* Стиль ссылок в навигации */
+.site-footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit; /* Наследует белый цвет от родителя */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.site-footer a:hover,
+.site-footer address a:hover {
+    opacity: 0.8;
+}
+
+/* Для адресной строки */
+.site-footer address {
+    line-height: 1.5;
+    font-style: normal; /* Убираем курсив */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 600px) {
+    .site-footer .container {
+        flex-direction: column; /* На узких экранах ставим блоки друг под другом */
+        gap: 1rem;
+    }
+}
+
+.site-footer nav ~ div { 
+    /* Селектор "сосед" для первого дочернего элемента после nav */ 
+    margin-top: 2rem; /* Отступ между навигацией и контактами */ 
+}
+
+/* Увеличим отступы для читаемости */ 
+.site-footer .container { 
+    padding-top: 3rem; 
+    padding-bottom: 3rem; 
+}
+
+/* Основной футер */
+.site-footer {
+    background-image: url("Shapka02.jpeg");
+    background-size: cover;
+    color: #fff;
+}
+
+/* Внутренний контейнер */
+.site-footer .container {
+    display: flex; /* Делаем его флексом */
+    justify-content: space-between; /* Разделяем блоки по краям */
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Левый блок с контактами */
+.contacts {
+    margin-top: 3rem; /* Отступ сверху для выравнивания */
+}
+
+/* Правый блок с меню */
+.menu {
+    text-align: right; /* Превращает список из строки в столбец */
+}
+
+/* Сами пункты меню */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 1rem; /* Расстояние между пунктами */
+}
+
+.menu a {
+    font-weight: bold;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+}
+
+/* Мобильная версия */
+@media screen and (max-width: 600px) {
+    .site-footer .container {
+        flex-direction: column-reverse; /* Меню вверху, текст под ним */
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .menu {
+        text-align: left; /* На мобильных делаем текст слева */
+    }
+}
+
+/* Базовое состояние всех карточек */
+.product-card {
+  opacity: 0; /* Скрываем карточки */
+}
+
+/* Ключевые кадры появления */
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Настройка анимации для каждой карточки */
+.model-1 {
+  animation: fadeInUp 0.8s forwards;
+}
+.model-2 {
+  animation: fadeInUp 0.8s forwards 0.8s;
+}
+.model-3 {
+  animation: fadeInUp 0.8s forwards 1.4s;
+}
+.model-4 {
+  animation: fadeInUp 0.8s forwards 1.8s;
+}
+.model-5 {
+  animation: fadeInUp 0.8s forwards 2.4s;
+}
+.model-6 {
+  animation: fadeInUp 0.8s forwards 2.8s;
+}
+.model-7 {
+  animation: fadeInUp 0.8s forwards 3.4s;
+}
+.model-8 {
+  animation: fadeInUp 0.8s forwards 3.8s;
+}
+.model-9 {
+  animation: fadeInUp 0.8s forwards 4.4s;
+}
+/* Плавный скролл по всей странице */
+html {
+  scroll-behavior: smooth;
+}
+

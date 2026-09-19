@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Презентация мебели</title>
+    <link rel="stylesheet" href="styles.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@google/model-viewer/dist/model-viewer.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </head>
+<body>
+<div class="site-container">
+<!-- Шапка -->
+<div class="header" id="home">
+    <!-- Картинка -->
+    <div class="hero-banner">
+        <img src="Shapka.jpeg" alt="Шапка сайта"> 
+        
+        <!-- Текст -->
+        <div class="hero-content">
+            <h1>Каталог мебели</h1>
+            <p>Создайте уют вашего пространства</p>
+        </div>
+    </section>
+    
+    <!-- Навигация теперь здесь -->
+    <nav>
+      <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#kontakt">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Секция "Наши коллекции" -->
+<h2 class="section-header"></h2>
+<div class="collections-section">
+  <!-- Карточка №1 -->
+<div class="preview-card">
+  <span class="card-title">Мебель для офиса, где рождаются идеи</span>
+  <img src="Interior_01.jpg" alt="Модель 1" class="card-image">
+</div> <!-- ОБЯЗАТЕЛЬНО ЗАКРЫТЬ! -->
+  <!-- Карточка №2 -->
+  <div class="preview-card">
+    <span class="card-title">Команда за одним столом</span>
+    <img src="Interior_02.jpg" alt="Модель 2" class="card-image">
+  </div> <!-- Закрываем вторую карточку -->
+
+  <!-- Карточка №3 -->
+  <div class="preview-card">
+    <span class="card-title">Рабочее место с характером</span>
+    <img src="Interior_03.jpg" alt="Модель 3" class="card-image">
+  </div> <!-- Закрываем третью карточку -->
+</div>
+
+<!-- Секция "Детальный каталог" -->
+<div class="catalog-intro" id="catalog">
+  <h2 class="section-header">Каталог мебели</h2>
+</div>
+<div class="catalog-section">
+    <!-- Карточка №1 (пример) -->
+    <div class="product-card model-1">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+    <model-viewer src="Divan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" environment-image="legacy" exposure="0.73" auto-rotate camera-orbit="-31.43deg 72.61deg 7.454m" field-of-view="30deg">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        View in your space
+      </button>
+     <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+     </div>
+    </model-viewer>
+
+        </div>
+    </div>
+
+
+  <div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №2 -->
+    <div class="product-card model-2">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Comp_stol.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1.29" camera-orbit="47.34deg 61.47deg 4.03m" field-of-view="25.87deg" auto-rotate>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
+        </div>
+    </div>
+
+  <div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №3 -->
+    <div class="product-card model-3">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Konferenz01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="0.61" auto-rotate environment-image="legacy" camera-orbit="-489.7deg 71.81deg 3.643m" field-of-view="25.87deg">
+            <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+        </div>
+    </div>  
+
+  <div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №4 -->
+    <div class="product-card model-4">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Konferenz02.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="0.61" auto-rotate environment-image="legacy" camera-orbit="-563.7deg 69.42deg 4.718m" field-of-view="22.31deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+        </div>
+    </div>
+  
+  <div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №5 -->
+    <div class="product-card model-5">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Shkaf_01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="2" exposure="0.83" auto-rotate environment-image="legacy" shadow-softness="1" camera-orbit="-325deg 78.56deg 5.374m" field-of-view="25.87deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
+        </div>
+    </div>
+    
+  <div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №6 -->
+    <div class="product-card model-6">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Kuhnya_03.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.58" exposure="0.68" auto-rotate environment-image="legacy" camera-orbit="-348.5deg 79.36deg 6.954m" field-of-view="25.87deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+        </div>
+    </div>
+   
+  <div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №7 -->
+    <div class="product-card model-7">
+        <div class="card-text">
+            <h3>Кухонный стол для офиса</h3>
+            <p>Простой и функциональный дизайн позволяет использовать<br> этот стол как для приема пищи,<br> так и для проведения небольших совещаний.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Stol_Kuhnya.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="2" exposure="0.87" auto-rotate shadow-softness="1" camera-orbit="-215.2deg 63.44deg 2.872m" field-of-view="30deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+        </div>
+    </div>
+    
+  <div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №8 -->
+    <div class="product-card model-8">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Stol_Kuhnya2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="2" exposure="0.75" auto-rotate shadow-softness="1" environment-image="legacy" camera-orbit="-344.1deg 65.03deg 3.93m" field-of-view="30deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
+        </div>
+    </div>  
+    <!-- И так далее до 10 карточек -->
+</div>
+
+<div class="catalog-intro"></div>  
+    <div class="catalog-section">
+    <!-- Карточка №9 -->
+    <div class="product-card model-9">
+        <div class="card-text">
+            <h3>Диван</h3>
+            <p>Описание модели.</p>
+            <ul class="specs-list">
+                <li><strong>Габариты:</strong> 140x80x73,5 см</li>
+                <li><strong>Материал столешницы:</strong> ЛДСП</li>
+                <li><strong>Кромка:</strong> ABS</li>
+                <!-- Остальные характеристики по аналогии -->
+            </ul>
+        </div>
+        <div class="card-model">
+            <!-- Здесь вставляется код из Model Viewer для вашей первой модели -->
+          <model-viewer src="Kuhnya_60.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="2" exposure="0.95" auto-rotate shadow-softness="0.92" environment-image="legacy" camera-orbit="-23.1deg 84.92deg 7.945m" field-of-view="22.31deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+        </div>
+    </div>
+<!-- Подвал -->
+<footer class="site-footer" id="kontakt">
+    <div class="container">
+        <!-- Логотип и контакты слева -->
+      <div class="contacts"> <!-- Блок для контактов -->
+        <div>
+            <p><strong>ООО "Янтарь"</strong></p>
+            <address>
+                г. Омск, ул. [Улица], д. [Номер дома]<br>
+                Тел.: +7 ([XXX]) XXX-XX-XX<br>
+                Email: info@yantarem.ru
+            </address>
+        </div>
+      </div>
+        
+        <!-- Навигация по сайту справа -->
+      <div class="menu"> <!-- Блок для меню -->
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#catalog">Каталог мебели</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+</footer>
+</body>
+</div>
+</html>
