@@ -490,6 +490,15 @@ nav a {
 .model-9 {
   animation: fadeInUp 0.8s forwards 4.4s;
 }
+.model-10 {
+  animation: fadeInUp 0.8s forwards 4.8s;
+}
+.model-11 {
+  animation: fadeInUp 0.8s forwards 5.0s;
+}
+.model-12 {
+  animation: fadeInUp 0.8s forwards 5.2s;
+}
 /* Плавный скролл по всей странице */
 html {
   scroll-behavior: smooth;
